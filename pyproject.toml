@@ -1,3 +1,30 @@
+[project]
+name = "lerobot"
+version = "0.1.0"
+description = "🤗 LeRobot: State-of-the-art Machine Learning for Real-World Robotics in Pytorch"
+authors = [
+    "Rémi Cadène <re.cadene@gmail.com>",
+    "Simon Alibert <alibert.sim@gmail.com>",
+    "Alexander Soare <alexander.soare159@gmail.com>",
+    "Quentin Gallouédec <quentin.gallouedec@ec-lyon.fr>",
+    "Adil Zouitine <adilzouitinegm@gmail.com>",
+    "Thomas Wolf <thomaswolfcontact@gmail.com>",
+]
+repository = "https://github.com/huggingface/lerobot"
+readme = "README.md"
+license = "Apache-2.0"
+classifiers=[
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+]
+packages = [{include = "lerobot"}]
+
 [tool.poetry]
 name = "lerobot"
 version = "0.1.0"
