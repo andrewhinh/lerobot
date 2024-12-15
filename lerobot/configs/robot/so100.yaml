@@ -31,7 +31,7 @@ leader_arms:
 follower_arms:
   main:
     _target_: lerobot.common.robot_devices.motors.feetech.FeetechMotorsBus
-    port: /dev/ttyACM0
+    port: /dev/ttyACM1
     motors:
       # name: (index, model)
       shoulder_pan: [1, "sts3215"]
