@@ -117,6 +117,7 @@ test-tdmpc-ete-train:
 		--device=$(DEVICE) \
 		--output_dir=tests/outputs/tdmpc/
 
+
 test-tdmpc-ete-eval:
 	python lerobot/scripts/eval.py \
 		--policy.path=tests/outputs/tdmpc/checkpoints/000002/pretrained_model \
@@ -153,3 +154,11 @@ test-tdmpc-ete-eval:
 # 		--eval.batch_size=1 \
 # 		--device=$(DEVICE) \
 # 		--output_dir=tests/outputs/tdmpc_online/
+
+teleop:
+	sudo chmod 666 /dev/ttyACM0
+	sudo chmod 666 /dev/ttyACM1
+	uv run lerobot/scripts/control_robot.py teleoperate \
+    --robot-path lerobot/configs/robot/so100.yaml \
+    --robot-overrides '~cameras' \
+    --display-cameras 0
