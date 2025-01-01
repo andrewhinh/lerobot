@@ -188,3 +188,11 @@ test-act-pusht-tutorial:
 		training.image_transforms.enable=true \
 		hydra.run.dir=tests/outputs/act_pusht/
 	rm lerobot/configs/policy/created_by_Makefile.yaml
+
+teleop:
+	sudo chmod 666 /dev/ttyACM0
+	sudo chmod 666 /dev/ttyACM1
+	uv run lerobot/scripts/control_robot.py teleoperate \
+    --robot-path lerobot/configs/robot/so100.yaml \
+    --robot-overrides '~cameras' \
+    --display-cameras 0
