@@ -2,13 +2,14 @@
 name = "lerobot"
 version = "0.1.0"
 description = "🤗 LeRobot: State-of-the-art Machine Learning for Real-World Robotics in Pytorch"
+requires-python = ">=3.10"
 authors = [
-    "Rémi Cadène <re.cadene@gmail.com>",
-    "Simon Alibert <alibert.sim@gmail.com>",
-    "Alexander Soare <alexander.soare159@gmail.com>",
-    "Quentin Gallouédec <quentin.gallouedec@ec-lyon.fr>",
-    "Adil Zouitine <adilzouitinegm@gmail.com>",
-    "Thomas Wolf <thomaswolfcontact@gmail.com>",
+    {name = "Rémi Cadène", email = "re.cadene@gmail.com"},
+    {name = "Simon Alibert", email = "alibert.sim@gmail.com"},
+    {name = "Alexander Soare", email = "alexander.soare159@gmail.com"},
+    {name = "Quentin Gallouédec", email = "quentin.gallouedec@ec-lyon.fr"},
+    {name = "Adil Zouitine", email = "adilzouitinegm@gmail.com"},
+    {name = "Thomas Wolf", email = "thomaswolfcontact@gmail.com"},
 ]
 repository = "https://github.com/huggingface/lerobot"
 readme = "README.md"

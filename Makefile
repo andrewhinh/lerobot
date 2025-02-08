@@ -155,10 +155,28 @@ test-tdmpc-ete-eval:
 # 		--device=$(DEVICE) \
 # 		--output_dir=tests/outputs/tdmpc_online/
 
+cal_flw:
+	sudo chmod 666 /dev/ttyACM0
+	sudo chmod 666 /dev/ttyACM1
+	uv run lerobot/scripts/control_robot.py \
+		--robot.type=so100 \
+		--robot.cameras='{}' \
+		--control.type=calibrate \
+		--control.arms='["main_follower"]'
+
+cal_ldr:
+	sudo chmod 666 /dev/ttyACM0
+	sudo chmod 666 /dev/ttyACM1
+	uv run lerobot/scripts/control_robot.py \
+		--robot.type=so100 \
+		--robot.cameras='{}' \
+		--control.type=calibrate \
+		--control.arms='["main_leader"]'
+
 teleop:
 	sudo chmod 666 /dev/ttyACM0
 	sudo chmod 666 /dev/ttyACM1
-	uv run lerobot/scripts/control_robot.py teleoperate \
-    --robot-path lerobot/configs/robot/so100.yaml \
-    --robot-overrides '~cameras' \
-    --display-cameras 0
+	uv run lerobot/scripts/control_robot.py \
+		--robot.type=so100 \
+		--robot.cameras='{}' \
+		--control.type=teleoperate
